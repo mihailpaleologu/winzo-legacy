@@ -5,7 +5,6 @@ gem 'rails', '3.2.15'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 
 group :production do
   gem 'pg'
@@ -47,6 +46,7 @@ gem 'unicorn'
 gem 'foreman'
 
 group :development do
+  gem 'sqlite3'
   gem 'better_errors'
   gem 'jazz_hands'
   gem 'quiet_assets'
