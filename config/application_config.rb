@@ -1,6 +1,6 @@
 configuration = {
 
-#  :app_host => "beta.winzo.ro", #override this in your application.yml
+  :app_host => "beta.winzo.ro", #override this in your application.yml
 
   :community_name => "winzo",
 
