@@ -43,7 +43,7 @@ Winzo::Application.configure do
       :bucket => 'winzo-dev',
       :access_key_id => 'AKIAJJG7YBEDVNEO6OIQ',
       :secret_access_key => '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',
-      :s3_endpoint => 's3-eu-west-1.amazonaws.com'
+      :s3_endpoint => 'winzo.s3.amazonaws.com'
     }
   }
 
