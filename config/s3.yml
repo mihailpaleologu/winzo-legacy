@@ -1,0 +1,17 @@
+development:
+  bucket: winzo-dev
+  access_key_id: 'AKIAJJG7YBEDVNEO6OIQ'
+  secret_access_key: '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'
+  use_persistent: true
+
+test:
+  bucket: winzo-test
+  access_key_id: 'AKIAJJG7YBEDVNEO6OIQ'
+  secret_access_key: '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'
+  use_persistent: false
+
+production:
+  bucket: winzo
+  access_key_id: 'AKIAJJG7YBEDVNEO6OIQ'
+  secret_access_key: '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'
+  use_persistent: false

@@ -58,7 +58,8 @@ end
 gem "haml", ">= 3.1.6"
 gem "haml-rails", ">= 0.3.4", :group => :development
 gem "kaminari"
-gem "therubyracer", :group => :assets, :platforms => :ruby
+# gem "therubyracer", :group => :assets, :platforms => :ruby
 
 gem 'community_engine'
 gem 'omniauth-facebook'
+gem 'aws-sdk'
