@@ -36,7 +36,7 @@ gem 'jquery-rails'
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
@@ -56,7 +56,8 @@ end
 
 gem "haml", ">= 3.1.6"
 gem "haml-rails", ">= 0.3.4", :group => :development
-gem "will_paginate", ">= 3.0.3"
+gem "kaminari"
 gem "therubyracer", :group => :assets, :platforms => :ruby
 
 gem 'community_engine'
+gem 'omniauth-facebook'

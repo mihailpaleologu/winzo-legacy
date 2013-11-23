@@ -137,6 +137,7 @@ GEM
     hirb (0.7.1)
     hpricot (0.8.6)
     htmlentities (4.3.1)
+    httpauth (0.2.0)
     i18n (0.6.5)
     jazz_hands (0.5.2)
       awesome_print (~> 1.2)
@@ -155,9 +156,12 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
+    jwt (0.1.8)
+      multi_json (>= 1.5)
     kaminari (0.15.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    kgio (2.8.1)
     koala (1.6.0)
       addressable (~> 2.2)
       faraday (~> 0.8)
@@ -178,9 +182,20 @@ GEM
     multipart-post (1.2.0)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
+    oauth2 (0.8.1)
+      faraday (~> 0.8)
+      httpauth (~> 0.1)
+      jwt (~> 0.1.4)
+      multi_json (~> 1.0)
+      rack (~> 1.2)
     omniauth (1.1.4)
       hashie (>= 1.2, < 3)
       rack
+    omniauth-facebook (1.5.1)
+      omniauth-oauth2 (~> 1.1.0)
+    omniauth-oauth2 (1.1.1)
+      oauth2 (~> 0.8.0)
+      omniauth (~> 1.0)
     paperclip (3.5.1)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -246,6 +261,7 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
+    raindrops (0.12.0)
     rake (10.1.0)
     rakismet (1.4.0)
     rdoc (3.12.2)
@@ -281,8 +297,11 @@ GEM
     uglifier (2.3.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unicorn (4.7.0)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
     uuidtools (2.1.4)
-    will_paginate (3.0.5)
     yamler (0.1.0)
     yard (0.8.7.3)
 
@@ -301,6 +320,8 @@ DEPENDENCIES
   haml-rails (>= 0.3.4)
   jazz_hands
   jquery-rails
+  kaminari
+  omniauth-facebook
   pg
   quiet_assets
   rails (= 3.2.15)
@@ -309,4 +330,4 @@ DEPENDENCIES
   sqlite3
   therubyracer
   uglifier (>= 1.0.3)
-  will_paginate (>= 3.0.3)
+  unicorn
