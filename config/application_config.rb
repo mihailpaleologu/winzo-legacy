@@ -4,6 +4,8 @@ configuration = {
 
   :community_name => "winzo",
 
+  :theme => "winzo",
+
   :community_tagline => "Buy & sell with friends",
   :community_description =>  "A social shopping network connecting buyers and sellers.",
   :support_email =>  "contact@winzo.ro",
