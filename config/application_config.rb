@@ -1,8 +1,8 @@
 if Rails.env == "production" 
-  S3_DEFAULT_HOST = "winzo.s3.amazonaws.com"
+  S3_DEFAULT_HOST = "s3-eu-west-1.amazonaws.com"
   S3_CREDENTIALS = { :access_key_id => ENV['S3_KEY'], :secret_access_key => ENV['S3_SECRET'], :bucket => ENV['S3_BUCKET_NAME']} 
 else 
-  S3_DEFAULT_HOST = "winzo-dev.s3.amazonaws.com"
+  S3_DEFAULT_HOST = "s3-eu-west-1.amazonaws.com"
   S3_CREDENTIALS = Rails.root.join("config/s3.yml")
 end
 
