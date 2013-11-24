@@ -1,0 +1,44 @@
+!!!
+%html
+  %head
+    =csrf_meta_tag
+    %title= page_title
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+  %body
+    .splash-image
+      %nav.logo.row
+        .large-12.columns
+          %a{href: "/", title: "winzo"}
+            %span winzo
+            / img src="img/logo.png" alt="winzo logo" /
+      .row
+        .large-12.small-12.columns.hero-copy
+          %h1 Buy, sell and trade with friends
+    .row
+      .large-6.small-12.small-centered.columns.signup
+        %a.button.large.radius{href: "#{signup_path}"} Sign Up Now
+        .login
+          %a{href: "#{login_path}"} or login here
+    .section-green
+      .row
+        .large-6.small-12.columns
+          %h2
+            %strong Sellers:
+            make new friends and clients, not just fans
+          %ul
+            %li Selling a product is as easy as updating your status with a photo, a description and a price.
+            %li Your friends will be notified and can buy with one click.
+            %li Keep being active on social media, knowing you'll gain clients, not just fans.
+            %li Your friends will advertise your product on their feeds and bring more clients.
+        .large-6.small-12.columns
+          %h2
+            %strong Buyers:
+            discover new products and trusted sellers
+          %ul
+            %li See a list of your friends' recent purchases and discover new products you'll love.
+            %li One-click hassle-free buying directly on winzo.
+            %li If you're a seller too, you can trade your products for others.
+            %li Sellers are verified by winzo before buying, so you can always trust your purchase.
+    %footer.footer
+      © winzo.ro 2013

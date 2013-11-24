@@ -18,3 +18,4 @@ function scrollToAnchor(anchor){
   }
   document.location.href = loc;
 }
+

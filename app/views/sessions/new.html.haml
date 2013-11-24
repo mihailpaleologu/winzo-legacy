@@ -1,6 +1,4 @@
-.yui-b.sidebar=render :partial => 'shared/login_sidebar'
-
-#yui-main
+.large-6.centered.columns
   .yui-b.main_column
     -box do
       %h3
@@ -25,3 +23,6 @@
           = link_to(image_tag("auth/#{provider.to_s}_64.png", :alt => alt), "/auth/#{provider.to_s}", :title => alt)
 
 
+.row
+  .large-6.centered.columns
+    .yui-b.sidebar=render :partial => 'shared/login_sidebar'

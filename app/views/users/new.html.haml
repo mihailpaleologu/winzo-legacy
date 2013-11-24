@@ -1,21 +1,3 @@
-.yui-b
-  -box do
-    %h3
-      =:why_sign_up.l
-    %ul.list.checks
-    %li
-      = :sign_up_reason_1.l
-    %li
-      = :sign_up_reason_2.l
-
-  -box :class => 'alt' do
-    %h3=:tips.l
-    %p
-      =:after_signing_up_youll_receive_an_e_mail_confirmation_message.l
-    %p
-      =:click_the_activation_link_in_the_e_mail_to_log_in.l
-    %p= link_to :already_have_an_account.l, "/login"
-
 #yui-main
   .yui-b
     -box do

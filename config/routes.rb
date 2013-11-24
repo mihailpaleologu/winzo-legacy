@@ -1,4 +1,8 @@
 Winzo::Application.routes.draw do
+  get "mocks/mock_activities", as: "mock_activities"
+
+  get "mocks/mock_products", as: "mock_products"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

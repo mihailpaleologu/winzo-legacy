@@ -15,4 +15,7 @@
 //= require foundation
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+jQuery.noConflict();
+(function($){
+  $(function(){ $(document).foundation(); });
+})(jQuery);

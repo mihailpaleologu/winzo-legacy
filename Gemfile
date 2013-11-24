@@ -27,7 +27,6 @@ group :assets do
   gem 'font-awesome-sass'
 end
 
-gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -61,6 +60,7 @@ gem "kaminari"
 # gem "therubyracer", :group => :assets, :platforms => :ruby
 
 gem 'community_engine'
+gem 'jquery-rails', '~> 2.1'
 gem 'omniauth-facebook'
 gem 'aws-sdk'
 # gem 'paperclip-aws'
