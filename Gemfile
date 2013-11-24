@@ -63,3 +63,4 @@ gem "kaminari"
 gem 'community_engine'
 gem 'omniauth-facebook'
 gem 'aws-sdk'
+# gem 'paperclip-aws'

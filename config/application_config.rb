@@ -1,3 +1,16 @@
+if Rails.env == "production" 
+  S3_DEFAULT_HOST = "winzo.s3.amazonaws.com"
+  S3_CREDENTIALS = { :access_key_id => ENV['S3_KEY'], :secret_access_key => ENV['S3_SECRET'], :bucket => ENV['S3_BUCKET_NAME']} 
+else 
+  S3_DEFAULT_HOST = "winzo-dev.s3.amazonaws.com"
+  S3_CREDENTIALS = Rails.root.join("config/s3.yml")
+end
+
+Paperclip.interpolates(:s3_eu_url) { |attachment, style|
+  "#{attachment.s3_protocol}://#{S3_DEFAULT_HOST}/#{attachment.bucket_name}/#{attachment.path(style).gsub(%r{^/}, "")}"
+}
+
+
 configuration = {
 
   :app_host => "beta.winzo.ro", #override this in your application.yml
@@ -55,6 +68,8 @@ configuration = {
     :missing_medium => "/assets/icon_missing_medium.gif",
     :paperclip_options => {
       :storage => 's3',
+      :s3_credentials => S3_CREDENTIALS,
+      :url  => ":s3_eu_url",
       #:default_url => "",
       #:path => "#{Rails.root}/public/system/:attachment/:id/:style/:filename",
       #:url => "/system/:attachment/:id/:style/:filename",
@@ -78,6 +93,8 @@ configuration = {
     :dimensions => [150, 635],
     :paperclip_options => {
       :storage => 's3',
+      :s3_credentials => S3_CREDENTIALS,
+      :url  => ":s3_eu_url",
       #:default_url => "",
       #:path => "#{Rails.root}/public/system/:attachment/:id/:style/:filename",
       #:url => "/system/:attachment/:id/:style/:filename",
@@ -96,6 +113,8 @@ configuration = {
   :clipping => {
     :paperclip_options => {
       :storage => 's3',
+      :s3_credentials => S3_CREDENTIALS,
+      :url  => ":s3_eu_url",
       #:default_url => "",
       #:path => "#{Rails.root}/public/system/:attachment/:id/:style/:filename",
       #:url => "/system/:attachment/:id/:style/:filename",
